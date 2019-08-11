@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B452135F-63D6-42D7-9684-F463A1542005}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Penguin_Wars</RootNamespace>
+    <AssemblyName>Penguin Wars</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Shubham\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7F2797454396CD3E42CE9A92FE1353890CFB6156</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Penguin Wars_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PW.Designer.cs">
+      <DependentUpon>PW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Input.cs" />
+    <Compile Include="KeyboardController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Snakeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Snakeform.Designer.cs">
+      <DependentUpon>Snakeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SnakePart.cs" />
+    <Compile Include="Snowball.cs" />
+    <EmbeddedResource Include="PW.resx">
+      <DependentUpon>PW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Snakeform.resx">
+      <DependentUpon>Snakeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Penguin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Complete Map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Life2c.png" />
+    <None Include="Resources\Life2.png" />
+    <None Include="Resources\Life1c.png" />
+    <None Include="Resources\Life1.png" />
+    <None Include="Resources\Snowball.png" />
+    <None Include="Resources\StnUpR2.png" />
+    <None Include="Resources\StnDownR2.png" />
+    <None Include="Resources\RightR2.png" />
+    <None Include="Resources\LeftR2.png" />
+    <None Include="Resources\StnUpO2.png" />
+    <None Include="Resources\StnDownO2.png" />
+    <None Include="Resources\RightO2.png" />
+    <None Include="Resources\LeftO2.png" />
+    <None Include="Resources\StnUpG2.png" />
+    <None Include="Resources\StnDownG2.png" />
+    <None Include="Resources\RightG2.png" />
+    <None Include="Resources\LeftG2.png" />
+    <None Include="Resources\StnUpB2.png" />
+    <None Include="Resources\StnDownB2.png" />
+    <None Include="Resources\RightB2.png" />
+    <None Include="Resources\LeftB2.png" />
+    <None Include="Resources\StnUpR.png" />
+    <None Include="Resources\StnDownR.png" />
+    <None Include="Resources\RightR.png" />
+    <None Include="Resources\LeftR.png" />
+    <None Include="Resources\StnUpG.png" />
+    <None Include="Resources\StnDownG.png" />
+    <None Include="Resources\Right.png" />
+    <None Include="Resources\Left.png" />
+    <None Include="Resources\Standing Upwards copy.png" />
+    <None Include="Resources\Standing Right copy.png" />
+    <None Include="Resources\Standing Left copy.png" />
+    <None Include="Resources\Standing Downwards copy.png" />
+    <None Include="Resources\Title Screen.png" />
+    <None Include="Resources\ScrPaused.png" />
+    <None Include="Resources\Title Screen.jpg" />
+    <None Include="Resources\Selection.png" />
+    <None Include="Resources\Back.png" />
+    <None Include="Resources\Icon.png" />
+    <None Include="Resources\GAMEOVER1.png" />
+    <None Include="Resources\GAMEOVER2.png" />
+    <Content Include="Resources\Image1.png" />
+    <None Include="Resources\Walking Up 2.png" />
+    <None Include="Resources\Walking Up 1.png" />
+    <None Include="Resources\Walking Right 2.png" />
+    <None Include="Resources\Walking Right 1.png" />
+    <None Include="Resources\Walking Left 2.png" />
+    <None Include="Resources\Walking Left 1.png" />
+    <None Include="Resources\Walking Down 2.png" />
+    <None Include="Resources\Walking Down 1.png" />
+    <None Include="Resources\Standing Upwards.png" />
+    <None Include="Resources\Standing Right.png" />
+    <None Include="Resources\Standing Left.png" />
+    <None Include="Resources\Standing Downwards.png" />
+    <None Include="Resources\Penguin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
